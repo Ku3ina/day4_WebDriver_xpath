@@ -14,16 +14,8 @@ public class TestGmail {
     @Test
     public void testGmail() throws InterruptedException {
         WebDriver webDriver = WebDriverManager.getDriver();
-//  немного практики из лекции
-        webDriver.get("https://yandex.ru/");
-        webDriver.findElement(By.id("text")).click();
-        webDriver.findElement(By.id("text")).sendKeys("Hello world!");
-        webDriver.findElement(By.id("text")).sendKeys(Keys.ENTER);
-        Thread.sleep(2000);
-
         webDriver.get("https://dev.n7lanit.ru/");
-        webDriver.findElement(By.xpath("//*[@id='page-mount']/div/div[2]/div[1]/div[1]/div/button")).click();
-        Thread.sleep(1000);
+   //   webDriver.findElement(By.xpath("//*[@id='page-mount']/div/div[2]/div[1]/div[1]/div/button")).click();
         webDriver.findElement(By.xpath("//*[@id='misago-container']/nav/div/ul/li[3]/a")).click();
         Thread.sleep(500);
         webDriver.findElement(By.xpath("/html/body/div[3]/nav/div/ul/li[2]/a")).click();
@@ -37,7 +29,5 @@ public class TestGmail {
         System.out.println("Браузер был открыт " + ((ChromeDriver) webDriver).getSessionId());
         Thread.sleep(1000);
         webDriver.quit();
-        // получилось больше 30 строк, увы
-
     }
 }
