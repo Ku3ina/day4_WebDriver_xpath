@@ -17,17 +17,13 @@ public class TestGmail {
         webDriver.get("https://dev.n7lanit.ru/");
    //   webDriver.findElement(By.xpath("//*[@id='page-mount']/div/div[2]/div[1]/div[1]/div/button")).click();
         webDriver.findElement(By.xpath("//*[@id='misago-container']/nav/div/ul/li[3]/a")).click();
-        Thread.sleep(500);
         webDriver.findElement(By.xpath("/html/body/div[3]/nav/div/ul/li[2]/a")).click();
-        Thread.sleep(500);
         webDriver.findElement(By.xpath("//*[@id='user-menu-mount']/div/div/div/a/i")).click();
-        Thread.sleep(500);
         webDriver.findElement(By.xpath("//*[@id='user-menu-mount']//div/ul/li[1]/input")).sendKeys("Svetlana");
-        Thread.sleep(1000);
         webDriver.findElement(By.xpath("//*[@id='user-menu-mount']//ul/li[3]/a/div/div[2]/h5")).click();
         Assert.assertTrue(webDriver.findElement(By.xpath("//*[@id='page-mount']//div[1]//div[1]/div//h1")).isDisplayed(), "Элемент найден!");
         System.out.println("Браузер был открыт " + ((ChromeDriver) webDriver).getSessionId());
-        Thread.sleep(1000);
+    //  Thread.sleep(1000);
         webDriver.quit();
     }
 }
