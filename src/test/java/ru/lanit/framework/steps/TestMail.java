@@ -10,7 +10,7 @@ import ru.lanit.framework.webdriver.WebDriverManager;
 
 public class TestMail {
 
-    @Test
+    @Test(enabled = false)
     public void testMail() throws InterruptedException {
         WebDriver webDriver = WebDriverManager.getDriver();
         webDriver.get("https://mail.ru/");

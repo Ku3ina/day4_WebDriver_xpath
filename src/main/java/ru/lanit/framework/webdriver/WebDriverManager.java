@@ -28,7 +28,7 @@ public class WebDriverManager {
                 ChromeOptions option = new ChromeOptions();
                 option.addArguments("--window-size=1024,768");
                 driver = new ChromeDriver(option);
-            } catch(UnreachableBrowserException e) {
+            } catch (UnreachableBrowserException e) {
                 System.err.println("Невозможно инциализировать драйвер!" + e);
             }
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //ожидание появления элементов на странице
