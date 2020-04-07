@@ -11,11 +11,10 @@ import ru.lanit.framework.webdriver.WebDriverManager;
 
 public class TestGmail {
 
-    @Test
+    @Test(enabled = false)
     public void testGmail() throws InterruptedException {
         WebDriver webDriver = WebDriverManager.getDriver();
         webDriver.get("https://dev.n7lanit.ru/");
-   //   webDriver.findElement(By.xpath("//*[@id='page-mount']/div/div[2]/div[1]/div[1]/div/button")).click();
         webDriver.findElement(By.xpath("//*[@id='misago-container']/nav/div/ul/li[3]/a")).click();
         webDriver.findElement(By.xpath("/html/body/div[3]/nav/div/ul/li[2]/a")).click();
         webDriver.findElement(By.xpath("//*[@id='user-menu-mount']/div/div/div/a/i")).click();
@@ -23,7 +22,8 @@ public class TestGmail {
         webDriver.findElement(By.xpath("//*[@id='user-menu-mount']//ul/li[3]/a/div/div[2]/h5")).click();
         Assert.assertTrue(webDriver.findElement(By.xpath("//*[@id='page-mount']//div[1]//div[1]/div//h1")).isDisplayed(), "Элемент найден!");
         System.out.println("Браузер был открыт " + ((ChromeDriver) webDriver).getSessionId());
-    //  Thread.sleep(1000);
+        //  Thread.sleep(1000); // ожидание уже добавлено в WebDriverManager
         webDriver.quit();
     }
+
 }
