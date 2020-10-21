@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 import ru.lanit.framework.webdriver.WebDriverManager;
 
 public class TestGmail {
+    @Test(enabled = false)
 
-    @Test
     public void testGmail() throws InterruptedException {
         WebDriver webDriver = WebDriverManager.getDriver();
         webDriver.get("https://dev.n7lanit.ru/");
